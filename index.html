@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEMCO Loan Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="calculator-container">
+    <div class="header">
+        <h2>CEMCO Loan Calculator</h2>
+        <p>By: Nelson D. Padecio</p>
+        <p id="dateTime"></p>
+    </div>
+    <div class="input-group">
+        <label>Type of Loan:</label>
+        <select id="loanType">
+            <option value="Providential">Providential (Max 400k / 36mo)</option>
+            <option value="Emergency">Emergency (Max 15k / 15mo)</option>
+            <option value="Quick Loan">Quick Loan (Max 10k / 10mo)</option>
+        </select>
+        
+        <label>Amount of Loan:</label>
+        <input type="number" id="amount" placeholder="Halaga ng uutangin">
+        
+        <label>Terms (Month):</label>
+        <input type="number" id="terms" placeholder="Ilang buwan">
+        
+        <label>Mode of Payment:</label>
+        <select id="mode">
+            <option value="Weekly">Weekly</option>
+            <option value="Semimonthly">Semimonthly</option>
+        </select>
+        
+        <button onclick="calculateLoan()">CLICK TO COMPUTE</button>
+        <button class="reset-btn" onclick="resetCalc()">RESET</button>
+    </div>
+
+    <div class="results" id="resultsArea">
+        <div class="result-row"><span>Amortization:</span> <strong id="resAmort">₱ 0.00</strong></div>
+        <div class="result-row"><span>Loan Interest:</span> <span id="resInterest">0.00</span></div>
+        <div class="result-row"><span>2% Share Cap:</span> <span id="resShare">0.00</span></div>
+        <div class="result-row"><span>Processing Fee:</span> <span id="resProc">0.00</span></div>
+        <hr>
+        <div class="result-row total"><span>Net Proceeds:</span> <strong id="resNet">₱ 0.00</strong></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
