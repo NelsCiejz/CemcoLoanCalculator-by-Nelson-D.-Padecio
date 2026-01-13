@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -41,15 +42,22 @@
         <button class="reset-btn" onclick="resetCalc()">RESET</button>
     </div>
 
-    <div class="results" id="resultsArea">
+    <<div class="results" id="resultsArea">
         <div class="result-row"><span>Amortization:</span> <strong id="resAmort">₱ 0.00</strong></div>
         <div class="result-row"><span>Loan Interest:</span> <span id="resInterest">0.00</span></div>
         <div class="result-row"><span>2% Share Cap:</span> <span id="resShare">0.00</span></div>
         <div class="result-row"><span>Processing Fee:</span> <span id="resProc">0.00</span></div>
         <hr>
         <div class="result-row total"><span>Net Proceeds:</span> <strong id="resNet">₱ 0.00</strong></div>
-    </div>
-</div>
+        
+        <div id="actionArea" style="display: none; margin-top: 20px; gap: 10px; justify-content: center;">
+            <button onclick="shareResult()" style="background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+                Share Result
+            </button>
+            <button onclick="window.print()" style="background-color: #17a2b8; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+                Save as PDF
+            </button>
+        </div> </div> </div> ```
 
 <script src="script.js"></script>
 </body>
