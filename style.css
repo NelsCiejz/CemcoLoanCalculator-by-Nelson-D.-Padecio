@@ -12,3 +12,42 @@ button:hover { background: #1557b0; }
 .results { margin-top: 25px; background: #f8f9fa; padding: 15px; border-radius: 8px; }
 .result-row { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.95em; }
 .total { color: #28a745; font-size: 1.1em; margin-top: 10px; border-top: 1px solid #ccc; padding-top: 10px; }
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+
+    .calculator-container {
+        background-color: #1e1e1e;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .header h2 {
+        color: #bb86fc; /* Light purple para sa header */
+    }
+
+    input, select {
+        background-color: #2c2c2c;
+        color: #ffffff;
+        border: 1px solid #444;
+    }
+
+    .results {
+        background-color: #252525;
+        border-top: 2px solid #333;
+    }
+
+    .result-row span {
+        color: #bbb;
+    }
+
+    .result-row strong, .result-row span[id^="res"] {
+        color: #03dac6; /* Teal color para sa mga numbers */
+    }
+
+    .total {
+        border-top: 1px solid #444;
+    }
+}
